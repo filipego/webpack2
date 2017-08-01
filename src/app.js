@@ -1,3 +1,9 @@
 const scss = require ('./app.scss');
 
-console.log('hello gladys')
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+ReactDOM.render(
+  <h1>React World</h1>,
+    document.getElementById('wrapper')
+);

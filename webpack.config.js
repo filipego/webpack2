@@ -16,15 +16,17 @@ module.exports = {
           //resolve-url-loader may be chained before sass-loader if necessary
           use: ['css-loader', 'sass-loader']
         })
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: 'babel-loader'
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Project',
-      minify: {
-        collapseWhitespace: true,
-      },
       hash: true,
       template: './src/index.html', // Load a custom template (ejs by default see the FAQ for details)
     }),
